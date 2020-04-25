@@ -126,12 +126,17 @@ h1 > .rich-text > p {
 	flex-direction: column;
 	position: sticky;
     height: 100vh;
-    text-align: : center;
+    align-items: center;
+    justify-content: center;
     background-color: black;
     color: white;
 }
 
-.block-poem_body {
+.left > h1 {
+	text-align: center;
+}
+
+.block-poem_body > .rich-text {
 	padding: 7%;
     display: flex;
     flex-direction: column;
