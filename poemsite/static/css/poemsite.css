@@ -1,3 +1,7 @@
+body {
+	font-family: 'Noto Sans KR'
+}
+
 p {
 	margin-bottom: 0;
 }
@@ -131,6 +135,7 @@ h1 > .rich-text > p {
     background-color: black;
     color: white;
     padding: 7%;
+    font-family: "Lora";
 }
 
 .left > h1 {
