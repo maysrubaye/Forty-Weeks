@@ -81,16 +81,36 @@
 }
 
 .btn {
-	background-color: ghostwhite;
-    color: black;
-    border-color: black;
-}
-
-.btn:hover {
 	background-color: black;
     color: white;
     border-color: black;
+    border-radius: 0;
+}
 
+.btn:hover {
+	background-color: white;
+    color: black;
+    border-color: black;
+
+}
+
+.mr-sm-2, .mx-sm-2 {
+   margin-right: 0!important;
+}
+
+.form-control {
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 0; 
+    margin-right: 0;
+}
+
+.form-control:focus {
+    color: #000;
+    background-color: #fff;
+    border-color: #000;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(111,111,111,.2);
 }
 
 a.activeMenuItem {
