@@ -140,6 +140,7 @@ h1 > .rich-text > p {
 
 .left > h1 {
 	text-align: center;
+	font-size: 3rem;
 }
 
 h4 > .rich-text {
