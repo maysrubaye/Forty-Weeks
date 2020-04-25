@@ -18,7 +18,6 @@
 				{{ page.sub_text|richtext }}
 			</h4>
 		</div>
-
 		<a href="#collection">
 		<div class="downArrow bounce">
 			<i style="color: black;">{{ page.scroll_text|richtext }}</i>
@@ -34,7 +33,7 @@
 			{% for page in self.get_children.specific %}
 
 				<div class="poem_card card col-md-3">
-					<a href="http://localhost:8000/{{ page.title|slugify }}">
+					<a href="{{ request.site.root_url }}/{{ page.title|slugify }}">
 				    	<span class="poem_title">
 				    		{{ page.title }}
 				    	</span>
