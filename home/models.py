@@ -43,8 +43,8 @@ class Poem(Page):
 
     search_fields = Page.search_fields + [ # Inherit search_fields from Page
         index.SearchField('author', partial_match=True),
-        index.SearchField('author', partial_match=True),
         index.SearchField('body', partial_match=True),
+        index.FilterField('body'),
     ]
 
     content_panels = Page.content_panels + [
