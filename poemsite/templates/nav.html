@@ -135,6 +135,13 @@ a.activeMenuItem {
     border-bottom: 9px solid #E03A3E;
 }
 
+nav {
+    z-index: 999!important;
+}
+
+.navbar-light .navbar-toggler {
+    background-color: white;
+}
 
 @media screen and (max-width: 768px) {
 
@@ -148,24 +155,6 @@ a.activeMenuItem {
  .logo {
       width: 25%;
 }
-
 }
+
 </style>
-
-<!-- 
-<script type="text/javascript">
-        $(document).ready(function(){
-          $(window).scroll(function(){
-            var scroll = $(window).scrollTop();
-              if (scroll > 50) {
-                $(".navbar").css("background" , "white");
-                $(".navbar").css("box-shadow", "0 1px 6px 0 rgba(32,33,36,.28)");
-              }
-
-              else{
-                    $(".navbar").css("background" , "transparent");  
-                    $(".navbar").css("box-shadow", "none");
-              }
-          })
-        })
-</script> -->

@@ -9,7 +9,16 @@
 <div class="container">
 
 <section>
-	<div class="justify-content-center">
+	<div class="row">
+	<div class="col-md-2">
+		<div class="">
+			<img src="{% static 'img/Asset6.svg' %}" height="175">		
+			<img src="{% static 'img/Asset11.svg' %}" height="320">		
+		</div>
+
+	</div>
+
+	<div class="justify-content-center col-md-8">
 		<div>
 			<h1>
 				{{ page.main_text|richtext }}
@@ -26,6 +35,15 @@
 		</a>
 
 	</div>
+
+	<div class="col-md-2">
+		<img src="{% static 'img/Asset5.svg' %}" height="140">		
+		<img src="{% static 'img/Asset4.svg' %}" height="200">
+				<img src="{% static 'img/Asset2.svg' %}" height="130">
+
+
+	</div>
+</div>
 </section>
 
 	<div id="collection" class="row justify-content-center">

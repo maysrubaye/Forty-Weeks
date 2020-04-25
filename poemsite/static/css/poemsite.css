@@ -58,7 +58,9 @@ h1 > .rich-text > p {
 	padding: 20px;
 }
 
-
+.row {
+	align-items: center;
+}
 
 .downArrow{
 	align-content: center;
@@ -126,11 +128,32 @@ h1 > .rich-text > p {
 	}
 }
 
-/*@media (max-width: 700px) {
-	h1 > .rich-text > p {
+@media (max-width: 700px) {
+/*	h1 > .rich-text > p {
 		margin-top: 35%;
-	}
-}*/
+	}*/
+}
+
+
+.left {
+	display: flex;
+	flex-direction: column;
+	position: sticky;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+}
+
+.block-poem_body {
+	padding: 7%;
+}
+
+
+
+
+
 
 
 
