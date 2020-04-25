@@ -137,6 +137,10 @@ h1 > .rich-text > p {
 	text-align: center;
 }
 
+h4 > .rich-text {
+	text-align: center;
+}
+
 .block-poem_body > .rich-text {
 	padding: 7%;
     display: flex;
