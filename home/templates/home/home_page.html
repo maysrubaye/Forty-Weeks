@@ -33,7 +33,7 @@
 			{% for page in self.get_children.specific %}
 
 				<div class="poem_card card col-md-3">
-					<a href="{{ request.site.root_url }}/{{ page.title|slugify }}">
+					<a href="/{{ page.title|slugify }}">
 				    	<span class="poem_title">
 				    		{{ page.title }}
 				    	</span>
