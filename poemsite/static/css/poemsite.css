@@ -130,6 +130,7 @@ h1 > .rich-text > p {
     justify-content: center;
     background-color: black;
     color: white;
+    padding: 7%;
 }
 
 .left > h1 {
