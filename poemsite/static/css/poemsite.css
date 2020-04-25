@@ -121,27 +121,12 @@ h1 > .rich-text > p {
   }
 }
 
-
-@media (min-width: 768px) {
-.col-md-3 {
-    max-width: 24%;
-	}
-}
-
-@media (max-width: 700px) {
-/*	h1 > .rich-text > p {
-		margin-top: 35%;
-	}*/
-}
-
-
 .left {
 	display: flex;
 	flex-direction: column;
 	position: sticky;
     height: 100vh;
-    align-items: center;
-    justify-content: center;
+    text-align: : center;
     background-color: black;
     color: white;
 }
@@ -152,6 +137,21 @@ h1 > .rich-text > p {
     flex-direction: column;
     height: 100vh;
 }
+
+@media (min-width: 768px) {
+.col-md-3 {
+    max-width: 24%;
+	}
+}
+
+@media (max-width: 700px) {
+	.left {
+		height: 100%;
+	}
+}
+
+
+
 
 
 
