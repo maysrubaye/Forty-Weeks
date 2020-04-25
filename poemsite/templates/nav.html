@@ -1,0 +1,135 @@
+{% load static wagtailuserbar %}
+{% load wagtailcore_tags %}
+    
+<nav class="navbar navbar-expand-lg navbar-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navTog" aria-controls="navTog" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="navv collapse navbar-collapse" id="navTog">
+            <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="{% slugurl 'home' %}">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% slugurl 'about' %}">About</a>
+            </li>
+        </ul>
+        {% include 'includes/search_box.html' %}
+
+  </div>
+</nav>
+
+
+
+
+<style type="text/css">
+
+.navv > ul {
+  margin-top: 3%;
+  margin-bottom: 3%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: transparent;
+} 
+
+.navbar-nav > li {
+  float: right;
+}
+
+.nav-item > a {
+	color: black;
+  font-size: 21px;
+  font-weight: 500;
+  color: black;
+  text-align: center;
+  padding: 3px 16px;
+  text-decoration: none;
+}
+
+
+.logo {
+    float: left;
+    width: 13%;
+    margin-left: 5%;
+}
+
+.logo a:hover {
+    color: #000;
+    background-color: transparent;
+    border-bottom: 0px solid transparent;
+}
+
+/*.navv {
+  margin: 2% 3%;
+  margin-bottom: 5%;
+}*/
+
+.navbar-light .navbar-nav .nav-link {
+	color: black;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: white;
+    background-color: #000;
+  }
+
+.stick-bg {
+  background-color: white;
+}
+
+.btn {
+	background-color: ghostwhite;
+    color: black;
+    border-color: black;
+}
+
+.btn:hover {
+	background-color: black;
+    color: white;
+    border-color: black;
+
+}
+
+a.activeMenuItem {
+    color: #000;
+    text-decoration: none;
+    border-bottom: 9px solid #E03A3E;
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .logo {
+      width: 50%;
+    }
+}
+
+@media screen and (min-width: 450px) and (max-width: 768px) {
+  
+ .logo {
+      width: 25%;
+}
+
+}
+</style>
+
+<!-- 
+<script type="text/javascript">
+        $(document).ready(function(){
+          $(window).scroll(function(){
+            var scroll = $(window).scrollTop();
+              if (scroll > 50) {
+                $(".navbar").css("background" , "white");
+                $(".navbar").css("box-shadow", "0 1px 6px 0 rgba(32,33,36,.28)");
+              }
+
+              else{
+                    $(".navbar").css("background" , "transparent");  
+                    $(".navbar").css("box-shadow", "none");
+              }
+          })
+        })
+</script> -->

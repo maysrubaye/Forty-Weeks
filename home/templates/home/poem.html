@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+	{% load static %}
+
+{% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
+{% block body_class %}template-taxinfo{% endblock %}
+{% block content %}
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			{{ page.title }}
+			{{ page.author|richtext }}
+		</div>
+		<div class="col-md-6">
+			{{ page.body }}
+		</div>
+	</div>
+
+
+</div>
+
+
+{% endblock %}
