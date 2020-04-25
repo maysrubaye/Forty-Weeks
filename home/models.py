@@ -16,10 +16,12 @@ from wagtail.search import index
 class HomePage(Page):
     main_text = RichTextField(blank=True)
     sub_text = RichTextField(blank=True)
+    scroll_text = RichTextField(blank=True)
 
     content_panels = Page.content_panels + [
         FieldPanel('main_text', blocks.RichTextBlock(required=False)),
-        FieldPanel('sub_text', blocks.RichTextBlock(required=False))
+        FieldPanel('sub_text', blocks.RichTextBlock(required=False)),
+        FieldPanel('scroll_text', blocks.RichTextBlock(required=False))
     ]
     
 class About(Page):
