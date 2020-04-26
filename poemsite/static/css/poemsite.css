@@ -160,6 +160,14 @@ h4 > .rich-text {
     height: 100vh;
 }
 
+.poem_card:hover {
+	background-color: black;
+}
+
+.poem_card:hover > a {
+	color: white;
+}
+
 @media (min-width: 768px) {
 .col-md-3 {
     max-width: 24%;
