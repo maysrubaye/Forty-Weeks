@@ -137,6 +137,7 @@ h1 > .rich-text > p {
     color: white;
     padding: 7%;
     font-family: "Lora";
+    top: 0!important;
 }
 
 .left > h1 {
@@ -146,6 +147,8 @@ h1 > .rich-text > p {
 
 .right {
 	margin-left: auto;
+	margin-top: 5%;
+	margin-bottom: 5%;
 }
 
 
@@ -178,6 +181,7 @@ h4 > .rich-text {
 	.left {
 		height: 100%;
 		position: sticky;
+    	z-index: 999;
 	}
 
 }
