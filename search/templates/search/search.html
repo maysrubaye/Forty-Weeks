@@ -17,6 +17,7 @@
     <br>
     <div class="row">
     {% if search_results %}
+    <div class="results">
         <ul>
             {% for result in search_results %}
                 <li>
@@ -37,6 +38,7 @@
         {% endif %}
     {% elif search_query %}
         No results found
+    </div>
     {% endif %}
     </div>
 </div>
