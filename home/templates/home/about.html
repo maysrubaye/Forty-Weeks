@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
+{% block body_class %}template-taxinfo{% endblock %}
+{% block content %}
+
+<div>
+	<div class="row row_">
+		<div class="col-md-6 left">
+			<span>{{ page.main_text|richtext }}</span>
+			
+		</div>
+		<div class="col-md-6 right">
+			<span>{{ page.sub_text|richtext }}</span>
+		</div>
+	</div>
+</div>
+
+
+{% endblock %}

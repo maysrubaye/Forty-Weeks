@@ -48,8 +48,10 @@
 
 	<div id="collection" class="row justify-content-center">
 
+
 			{% for page in self.get_children.specific %}
 
+				{% if page.title != "about" %}
 				<div class="poem_card card col-md-3">
 					<a href="/{{ page.title|slugify }}">
 				    	<span class="poem_title">
@@ -68,7 +70,7 @@
 						{% endif %}
 					</a>
 			    </div>
-
+			    {% endif %}
 		{% endfor %}
 	
 	</div>
