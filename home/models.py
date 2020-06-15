@@ -41,17 +41,22 @@ class Poem(Page):
     body = StreamField([
         ('poem_body', blocks.RichTextBlock()
             )], null=True, blank=True)
+    comments = RichTextField(blank=True)
+    biography = RichTextField(blank=True)
 
     search_fields = Page.search_fields + [ # Inherit search_fields from Page
         index.SearchField('semester_sent', partial_match=True),
         index.SearchField('title', partial_match=True),
         index.SearchField('author', partial_match=True),
         index.SearchField('body', partial_match=True),
-        index.FilterField('body'),
+        index.SearchField('comments', partial_match=True),
+        index.SearchField('biography', partial_match=True),
     ]
 
     content_panels = Page.content_panels + [
         FieldPanel('semester_sent', blocks.RichTextBlock(required=False)),
         FieldPanel('author', blocks.RichTextBlock(required=False)),
         StreamFieldPanel('body', classname="full"),
+        FieldPanel('comments', blocks.RichTextBlock(required=False)),
+        FieldPanel('biography', blocks.RichTextBlock(required=False)),
         ]
