@@ -4,11 +4,14 @@ from .base import *
 
 DEBUG = False
 
-import dj_database_url
 import os
+from dotenv import load_dotenv
+
+project_folder = os.path.expanduser('~/poemsite')  # adjust as appropriate
+load_dotenv(os.path.join(project_folder, '.env'))
 
 env = os.environ.copy()
-SECRET_KEY = env['SECRET_KEY']
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 
 DATABASES['default'] =  dj_database_url.config()
