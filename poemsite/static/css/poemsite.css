@@ -1,13 +1,18 @@
 body {
-	font-family: 'Noto Sans KR';
+	font-family: 'Noto Sans KR', sans-serif;';
 	background-color: #FFFFFD;
 	margin-bottom: 5%;
+  transition: .5s ease;
 }
 
 p {
 	margin-bottom: 0;
 }
 
+a, a:hover {
+  text-decoration: none;
+  color: inherit;
+}
 
 .card {
 	text-align: left;
@@ -60,6 +65,50 @@ p {
     transform: none;
   }
 
+.graphics {
+  display: flex;
+  flex-direction: row;
+}
+
+.container.home-container {
+  max-width: 100%;
+}
+
+.text-home {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+}
+
+.sub_text {
+    background-color: white;
+    padding: 1%;
+    margin-top: 1%;
+    margin-bottom: 4%;
+}
+
+
+.home-right {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    padding: 7%;
+    top: 0!important;
+}
+
+
+.home-left {
+  padding: 6.5%;
+}
+
+
+
 .bio > .rich-text > p {
   font-family: 'Noto Sans KR';
     font-size: 0.85rem;
@@ -69,7 +118,7 @@ p {
 }
 
 section {
-	height: 85vh;
+	height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -77,75 +126,50 @@ section {
 
 
 h1 > .rich-text > p {
-	font-size: 80px;
-	text-align: center;
-	background-color: black;
-	color: white;
-	padding: 20px;
-	font-family: "Lora";
+    font-size: 8rem;
+    text-align: left;
+    color: black;
+    font-family: 'Cantata One', serif;
 }
 
 .row {
 	align-items: center;
 }
 
-.downArrow{
-	align-content: center;
-	margin-top: 10%;
-	text-align: center;
+
+.home-cta {
+    border: none;
+    padding: 4% 10%;
+    border-radius: 50px;
+    background-color: white;
+    color: black;
+    font-size: 1.5rem;
+    mix-blend-mode: difference;
+    font-weight: 500;
+    border: 2px solid white;
+
 }
-.bounce {
-	-moz-animation: bounce 3s infinite;
-	-webkit-animation: bounce 3s infinite;
-	animation: bounce 3s infinite;
+
+.home-cta:hover {
+    border: 2px solid white;
+    background-color: black;
+    color: white;
 }
-@-moz-keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -moz-transform: translateY(0);
-    transform: translateY(0);
-  }
-  40% {
-    -moz-transform: translateY(-30px);
-    transform: translateY(-30px);
-  }
-  60% {
-    -moz-transform: translateY(-15px);
-    transform: translateY(-15px);
-  }
+
+
+.featured-cta {
+    padding: 4% 15%;
+    border-radius: 50px;
+    background-color: white;
+    color: black;
+    font-size: 1.3rem;
+    font-weight: 500;
+    border: 2px solid black;
 }
-@-webkit-keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  40% {
-    -webkit-transform: translateY(-30px);
-    transform: translateY(-30px);
-  }
-  60% {
-    -webkit-transform: translateY(-15px);
-    transform: translateY(-15px);
-  }
-}
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-  40% {
-    -moz-transform: translateY(-30px);
-    -ms-transform: translateY(-30px);
-    -webkit-transform: translateY(-30px);
-    transform: translateY(-30px);
-  }
-  60% {
-    -moz-transform: translateY(-15px);
-    -ms-transform: translateY(-15px);
-    -webkit-transform: translateY(-15px);
-    transform: translateY(-15px);
-  }
+
+.featured-cta:hover {
+    background-color: black;
+    color: white;
 }
 
 .left {
@@ -158,8 +182,8 @@ h1 > .rich-text > p {
     background-color: black;
     color: white;
     padding: 7%;
-    font-family: "Lora";
     top: 0!important;
+    z-index: 999;
 }
 
 .left > h1 {
@@ -177,10 +201,6 @@ h1 > .rich-text > p {
 	font-size: 2rem;
 }
 
-
-h4 > .rich-text {
-	text-align: center;
-}
 
 .block-poem_body > .rich-text {
 	 padding: 5%;
@@ -207,6 +227,58 @@ h4 > .rich-text {
 	height: 100%;
 }
 
+.collection {
+  position: relative;
+    background-color: white;
+    border-radius: 30px;
+    padding: 3%;
+    box-shadow: 1px 4px 13px rgba(0,0,0,0.15);
+}
+
+.list {
+      display: flex;
+    flex-direction: row;
+    flex-flow: wrap-reverse;
+    align-items: flex-end;
+    position: relative;
+}
+
+h2 > .rich-text > p{
+    font-size: 4.5rem;
+    font-weight: 900;
+}
+
+.side-box {
+    position: absolute;
+    height: 30%;
+    width: 40%;
+    background-color: white;
+    box-shadow: 1px 1px 15px rgba(0,0,0,0.2);
+    padding: 5%;
+    margin: auto;
+    right: 0;
+    top: 50%;
+    bottom: 50%;
+    border-radius: 10px;
+}
+
+
+.side-box h2 {
+  margin-bottom: 10%;
+  font-weight: 800;
+}
+
+
+.card.featured {
+  display: grid;
+  background-color: black;
+}
+
+.card.featured > a {
+  color: white;
+}
+
+
 
 @media (min-width: 768px) {
 .col-md-3 {
@@ -215,14 +287,34 @@ h4 > .rich-text {
 }
 
 @media (max-width: 766px) {
-	#collection {
-		margin-top: 10%;
+
+  .side-box {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-bottom: auto;
+    height: 50%;
+    box-shadow: 1px 1px 15px rgba(0,0,0,0.2);
+    padding: 5%;
+    margin-top: -4%;
+    margin-right: 3%;
+    margin-left: 3%;
+    bottom: 0;
+    top: 100%;
+    width: auto;
+  }
+
+	.collection {
+    border-radius: 20px;
+    padding: 5%;
+    margin-top: 35%;
 	}
 
 	.left {
-		height: 100%;
+		  height: 100%;
 	    position: relative;
 	    z-index: 1;
+      margin-top: 15%;
 	}
 
 	.left > h1 {
@@ -233,8 +325,38 @@ h4 > .rich-text {
 	.left > span > .rich-text > p {
 		font-size: 1rem;
 	}
+
   .right {
     margin: 5%;
+  }
+
+  h1 > .rich-text > p {
+    font-size: 5.5rem;
+    text-align: center;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+
+  .home-left {
+    padding: 5%;
+    position: absolute;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text-home {
+    background-color: white;
+    text-align: center;
+    margin-bottom: 5%;
+  }
+  
+  h2 > .rich-text > p{
+    font-size: 3.3rem;
+    text-align: center;
   }
 
 }

@@ -6,52 +6,73 @@
 {% block body_class %}template-taxinfo{% endblock %}
 {% block content %}
 
-<div class="container">
+
 
 <section>
+
+<div class="container home-container">
 	<div class="row">
-	<div class="col-md-2">
-		<div class="">
-			<img src="{% static 'img/Asset6.svg' %}" height="175">		
-			<img src="{% static 'img/Asset11.svg' %}" height="320">		
+		<div class="col-md-6 home-left">
+				<div class="text-home">
+					<h1>
+						{{ page.main_text|richtext }}
+					</h1>
+					<h4 class="sub_text">
+						{{ page.sub_text|richtext }}
+					</h4>
+				</div>
+
+				<button class="home-cta"><a href="#collection_title">{{ page.button_text|richtext }}</a></button>
 		</div>
 
-	</div>
+		<div class="col-md-6" style="padding: 0;">
+			
+			{% image page.home_page_image original class="right-img" %}
+			<div class="side-box">
+				<h2>featured Poem</h2>
+				{% for p in self.get_children.specific %}
+				{% if p.title == page.featured_poem.title %}
+				<div class="poem_card card featured">
+					<a href="/{{ p.title|slugify }}">
+				    	<span class="poem_title">
+				    		{{ p.title }}
+				    	</span>
+				    	<span class="author">
+				    	{{ p.author|richtext }}
+				    	</span>
+				    	{% if p.body|wordcount == 0 %}
 
-	<div class="justify-content-center col-md-8">
-		<div>
-			<h1>
-				{{ page.main_text|richtext }}
-			</h1>
-			<h4>
-				{{ page.sub_text|richtext }}
-			</h4>
+						{% elif p.body|wordcount < 120 %}
+							<p class="read_time">~1 min read</p>
+						{% else %}
+						<p class="read_time">~{% widthratio p.body|wordcount 120 1 %} min read</p>
+						{% endif %}
+					</a>
+			    </div>
+			    {% endif %}
+		{% endfor %}
+
+				<!-- <button class="featured-cta">{{ page.feature_button_text|richtext }}</button> -->
+			</div>
 		</div>
-		<a href="#collection">
-		<div class="downArrow bounce">
-			<i style="color: black;">{{ page.scroll_text|richtext }}</i>
-		  <img width="40" height="40" alt="" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDMyIDMyIiBoZWlnaHQ9IjMycHgiIGlkPSLQodC70L7QuV8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMycHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxwYXRoIGQ9Ik0yNC4yODUsMTEuMjg0TDE2LDE5LjU3MWwtOC4yODUtOC4yODhjLTAuMzk1LTAuMzk1LTEuMDM0LTAuMzk1LTEuNDI5LDAgIGMtMC4zOTQsMC4zOTUtMC4zOTQsMS4wMzUsMCwxLjQzbDguOTk5LDkuMDAybDAsMGwwLDBjMC4zOTQsMC4zOTUsMS4wMzQsMC4zOTUsMS40MjgsMGw4Ljk5OS05LjAwMiAgYzAuMzk0LTAuMzk1LDAuMzk0LTEuMDM2LDAtMS40MzFDMjUuMzE5LDEwLjg4OSwyNC42NzksMTAuODg5LDI0LjI4NSwxMS4yODR6IiBmaWxsPSIjMTIxMzEzIiBpZD0iRXhwYW5kX01vcmUiLz48Zy8+PGcvPjxnLz48Zy8+PGcvPjxnLz48L3N2Zz4=" />
-		</div>
-		</a>
-
 	</div>
-
-	<div class="col-md-2">
-		<img src="{% static 'img/Asset5.svg' %}" height="140">		
-		<img src="{% static 'img/Asset4.svg' %}" height="200">
-				<img src="{% static 'img/Asset2.svg' %}" height="130">
+	
+</div>
 
 
-	</div>
+
+
+</div>
 </div>
 </section>
 
-	<div id="collection" class="row justify-content-center">
+<div class="container">
+	<div class="row justify-content-center collection">
 
-
+		<h2 id="collection_title">{{ page.title_above_the_collection|richtext }}</h2><br>
+		<div id="collection" class="col-md-12 list">
 			{% for page in self.get_children.specific %}
-
-				{% if page.title != "about" %}
+				{% if page.title != 'about' %}
 				<div class="poem_card card col-md-3">
 					<a href="/{{ page.title|slugify }}">
 				    	<span class="poem_title">
@@ -72,7 +93,7 @@
 			    </div>
 			    {% endif %}
 		{% endfor %}
-	
+		</div>
 	</div>
 
 
