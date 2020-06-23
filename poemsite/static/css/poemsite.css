@@ -225,7 +225,7 @@ h1 > .rich-text > p {
     position: relative;
 }
 
-h2 > .rich-text > p{
+h2 > .rich-text > p {
     font-size: 4.5rem;
     font-weight: 900;
 }
@@ -244,9 +244,10 @@ h2 > .rich-text > p{
 }
 
 
-.side-box h2 {
+.side-box h2 > .rich-text >p  {
   margin-bottom: 10%;
   font-weight: 800;
+  font-size: 2rem;
 }
 
 

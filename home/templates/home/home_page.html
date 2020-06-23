@@ -28,30 +28,33 @@
 		<div class="col-md-6" style="padding: 0;">
 			
 			{% image page.home_page_image original class="right-img" %}
-			<div class="side-box">
-				<h2>featured Poem</h2>
-				{% for p in self.get_children.specific %}
-				{% if p.title == page.featured_poem.title %}
-				<div class="poem_card card featured">
-					<a href="/{{ p.title|slugify }}">
-				    	<span class="poem_title">
-				    		{{ p.title }}
-				    	</span>
-				    	<span class="author">
-				    	{{ p.author|richtext }}
-				    	</span>
-				    	{% if p.body|wordcount == 0 %}
 
-						{% elif p.body|wordcount < 120 %}
-							<p class="read_time">~1 min read</p>
-						{% else %}
-						<p class="read_time">~{% widthratio p.body|wordcount 120 1 %} min read</p>
-						{% endif %}
-					</a>
-			    </div>
-			    {% endif %}
-		{% endfor %}
-			</div>
+			{% if page.featured_section_title and page.featured_poem %}
+					<div class="side-box">
+					<h2>{{ page.featured_section_title|richtext }}</h2>
+					{% for p in self.get_children.specific %}
+						{% if p.title == page.featured_poem.title %}
+						<div class="poem_card card featured">
+							<a href="/{{ p.title|slugify }}">
+						    	<span class="poem_title">
+						    		{{ p.title }}
+						    	</span>
+						    	<span class="author">
+						    	{{ p.author|richtext }}
+						    	</span>
+						    	{% if p.body|wordcount == 0 %}
+
+								{% elif p.body|wordcount < 120 %}
+									<p class="read_time">~1 min read</p>
+								{% else %}
+								<p class="read_time">~{% widthratio p.body|wordcount 120 1 %} min read</p>
+								{% endif %}
+							</a>
+					    </div>
+					    {% endif %}
+					{% endfor %}
+				</div>
+			{% endif %}
 		</div>
 	</div>
 	

@@ -22,6 +22,7 @@ class HomePage(Page):
     home_page_image = models.ForeignKey(
         'wagtailimages.Image', null=True, blank=True, 
         on_delete=models.SET_NULL, related_name='+', verbose_name='Home Page Image')
+    featured_section_title = RichTextField(blank=True)
     featured_poem = models.ForeignKey('wagtailcore.Page', null=True, related_name='+', on_delete=models.SET_NULL)
     
     search_fields = Page.search_fields + [
@@ -37,6 +38,7 @@ class HomePage(Page):
         FieldPanel('button_text', blocks.RichTextBlock(required=False)),
         FieldPanel('title_above_the_collection', blocks.RichTextBlock(required=False)),
         ImageChooserPanel('home_page_image'),
+        FieldPanel('featured_section_title', blocks.RichTextBlock(required=False)),
         PageChooserPanel('featured_poem'),
     ]
     
