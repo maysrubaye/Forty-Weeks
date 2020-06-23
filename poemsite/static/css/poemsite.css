@@ -266,6 +266,10 @@ h2 > .rich-text > p{
     box-shadow: 0px 1px 10px rgba(0,0,0,0.1);
 }
 
+.container.colection {
+  max-width: 90%;
+}
+
 @media (min-width: 768px) {
 .col-md-3 {
     max-width: 24%;
