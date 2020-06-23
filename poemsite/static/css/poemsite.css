@@ -138,7 +138,6 @@ h1 > .rich-text > p {
 
 
 .home-cta {
-    border: none;
     padding: 4% 10%;
     border-radius: 50px;
     background-color: black;
@@ -146,28 +145,12 @@ h1 > .rich-text > p {
     font-size: 1.5rem;
     font-weight: 500;
     box-shadow: 0px 2px 15px rgba(225,225,225,0.5);
-}
-
-.home-cta:hover {
-    border: 2px solid white;
-    background-color: black;
-    color: white;
-}
-
-
-.featured-cta {
-    padding: 4% 15%;
-    border-radius: 50px;
-    background-color: white;
-    color: black;
-    font-size: 1.3rem;
-    font-weight: 500;
     border: 2px solid black;
 }
 
-.featured-cta:hover {
-    background-color: black;
-    color: white;
+.home-cta:hover {
+    background-color: white;
+    color: black;
 }
 
 .left {
@@ -226,6 +209,7 @@ h1 > .rich-text > p {
 }
 
 .collection {
+  text-align: center;
   position: relative;
     background-color: white;
     border-radius: 30px;
@@ -275,7 +259,12 @@ h2 > .rich-text > p{
   color: white;
 }
 
-
+.navbar {
+    background: white;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.1);
+}
 
 @media (min-width: 768px) {
 .col-md-3 {
@@ -305,7 +294,6 @@ h2 > .rich-text > p{
     border-radius: 20px;
     padding: 5%;
     margin-top: 60%;
-    position: absolute;
 	}
 
 	.left {
@@ -341,7 +329,7 @@ h2 > .rich-text > p{
   .home-left {
     padding: 5%;
     position: absolute;
-    z-index: 999;
+    z-index: 995;
     display: flex;
     flex-direction: column;
   }

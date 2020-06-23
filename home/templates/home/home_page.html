@@ -22,7 +22,7 @@
 					</h4>
 				</div>
 
-				<button class="home-cta"><a href="#collection_title">{{ page.button_text|richtext }}</a></button>
+				<a href="#collection_title"><button class="home-cta">{{ page.button_text|richtext }}</button></a>
 		</div>
 
 		<div class="col-md-6" style="padding: 0;">
@@ -51,8 +51,6 @@
 			    </div>
 			    {% endif %}
 		{% endfor %}
-
-				<!-- <button class="featured-cta">{{ page.feature_button_text|richtext }}</button> -->
 			</div>
 		</div>
 	</div>
@@ -67,7 +65,7 @@
 </section>
 
 <div class="container">
-	<div class="row justify-content-center collection">
+	<div class="justify-content-center collection">
 
 		<h2 id="collection_title">{{ page.title_above_the_collection|richtext }}</h2><br>
 		<div id="collection" class="col-md-12 list">
