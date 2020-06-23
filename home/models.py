@@ -23,7 +23,14 @@ class HomePage(Page):
         'wagtailimages.Image', null=True, blank=True, 
         on_delete=models.SET_NULL, related_name='+', verbose_name='Home Page Image')
     featured_poem = models.ForeignKey('wagtailcore.Page', null=True, related_name='+', on_delete=models.SET_NULL)
-
+    
+    search_fields = Page.search_fields + [
+        index.SearchField('main_text', partial_match=True),
+        index.SearchField('sub_text', partial_match=True),
+        index.SearchField('title_above_the_collection', partial_match=True),
+        index.SearchField('featured_poem', partial_match=True),
+    ]
+    
     content_panels = Page.content_panels + [
         FieldPanel('main_text', blocks.RichTextBlock(required=False)),
         FieldPanel('sub_text', blocks.RichTextBlock(required=False)),
@@ -36,6 +43,11 @@ class HomePage(Page):
 class About(Page):
     main_text = RichTextField(blank=True)
     sub_text = RichTextField(blank=True)
+
+    search_fields = Page.search_fields + [
+        index.SearchField('main_text', partial_match=True),
+        index.SearchField('sub_text', partial_match=True),
+    ]
 
     content_panels = Page.content_panels + [
         FieldPanel('main_text', blocks.RichTextBlock(required=False)),
