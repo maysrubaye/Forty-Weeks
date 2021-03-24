@@ -233,7 +233,7 @@ h2 > .rich-text > p {
 .side-box {
     position: absolute;
     height: fit-content;
-    width: 45%;
+    width: 20%;
     background-color: white;
     box-shadow: 1px 1px 15px rgba(0,0,0,0.2);
     padding: 5%;
@@ -294,7 +294,7 @@ h2 > .rich-text > p {
 }
 
 img {
-  clip-path: polygon(5% 0%, 100% 0%, 95% 100%, 0% 100%);
+  clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
     margin-left: 4%;
     width: 100%;
     height: auto;
@@ -308,6 +308,15 @@ img {
 
 .sub_text > .rich-text > p {
   margin-bottom: 1rem;
+}
+
+.sub_text > .rich-text > h2 {
+  font-size: 5rem;
+}
+
+.sub_text > .rich-text > h4 {
+  font-size: 1.3rem;
+  padding-top: 5%;
 }
 
 .home-cta {
@@ -348,14 +357,13 @@ img {
     left: 0;
     right: 0;
     margin-bottom: auto;
-    height: 50%;
+    height: 35%;
     box-shadow: 1px 1px 15px rgba(0,0,0,0.2);
     padding: 5%;
     margin-top: -4%;
     margin-right: 3%;
     margin-left: 3%;
     bottom: 0px;
-    top: 105%;
     width: auto;
   }
 
@@ -386,7 +394,7 @@ img {
   }
 
   h1 > .rich-text > p {
-    font-size: 5.5rem;
+    font-size: 3.5rem;
     text-align: center;
   }
 
@@ -410,8 +418,29 @@ img {
   }
   
   h2 > .rich-text > p{
-    font-size: 3.3rem;
+    font-size: 2.3rem;
     text-align: center;
+  }
+
+  .home-cta {
+    font-size: 1rem;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .sub_text > .rich-text > h2 {
+    font-size: 1rem;
+  }
+
+  .sub_text > .rich-text > h4 {
+    font-size: 1rem;
+    padding-top: 3%;
+  }
+
+  .side-box h2 > .rich-text >p {
+    margin-bottom: 5%;
+    font-size: 1.5rem;
   }
 
 }
