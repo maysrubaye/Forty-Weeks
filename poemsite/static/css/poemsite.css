@@ -126,7 +126,7 @@ section {
 
 
 h1 > .rich-text > p {
-    font-size: 6rem;
+    font-size: 5rem;
     text-align: left;
     color: black;
     font-family: 'Cantata One', serif;
@@ -311,7 +311,7 @@ img {
 }
 
 .sub_text > .rich-text > h2 {
-  font-size: 5rem;
+  font-size: 1.3rem;
 }
 
 .sub_text > .rich-text > h4 {
