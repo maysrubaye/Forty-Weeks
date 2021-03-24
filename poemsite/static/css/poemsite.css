@@ -230,19 +230,6 @@ h2 > .rich-text > p {
     font-weight: 900;
 }
 
-.side-box {
-    position: absolute;
-    height: fit-content;
-    width: 20%;
-    background-color: white;
-    box-shadow: 1px 1px 15px rgba(0,0,0,0.2);
-    padding: 5%;
-    margin: auto;
-    right: 0;
-    top: 50%;
-    bottom: 50%;
-}
-
 
 .side-box h2 > .rich-text >p  {
   margin-bottom: 10%;
@@ -333,12 +320,11 @@ img {
 .side-box {
     position: absolute;
     height: fit-content;
-    width: 40%;
+    width: 25%;
     background-color: white;
     box-shadow: 1px 1px 15px rgba(0,0,0,0.2);
     padding: 3%;
     margin: auto;
-    /* margin-top: 6%; */
     right: 0;
     top: 80%;
     bottom: 20%;
