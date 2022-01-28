@@ -15,15 +15,15 @@ from poemsite import custom_blocks
 from wagtail.search import index
 
 class HomePage(Page):
-    main_text = RichTextField(blank=True)
-    sub_text = RichTextField(blank=True)
-    button_text = RichTextField(blank=True)
-    title_above_the_collection = RichTextField(blank=True)
+    main_text = RichTextField(blank=True, verbose_name='Home Page Image')
+    sub_text = RichTextField(blank=True, verbose_name='Home Page Image')
+    button_text = RichTextField(blank=True, verbose_name='Home Page Image')
+    title_above_the_collection = RichTextField(blank=True, verbose_name='Home Page Image')
     home_page_image = models.ForeignKey(
         'wagtailimages.Image', null=True, blank=True, 
         on_delete=models.SET_NULL, related_name='+', verbose_name='Home Page Image')
-    featured_section_title = RichTextField(blank=True)
-    featured_poem = models.ForeignKey('wagtailcore.Page', null=True, related_name='+', on_delete=models.SET_NULL)
+    featured_section_title = RichTextField(blank=True, verbose_name='Home Page Image')
+    featured_poem = models.ForeignKey('wagtailcore.Page', null=True, blank=True, related_name='+', on_delete=models.SET_NULL)
     
     search_fields = Page.search_fields + [
         index.SearchField('main_text', partial_match=True),
@@ -33,7 +33,7 @@ class HomePage(Page):
     ]
     
     content_panels = Page.content_panels + [
-        FieldPanel('main_text', blocks.RichTextBlock(required=False)),
+        FieldPanel('main_text', blocks.RichTextBlock(required=False, verbose_name='Home Page Image')),
         FieldPanel('sub_text', blocks.RichTextBlock(required=False)),
         FieldPanel('button_text', blocks.RichTextBlock(required=False)),
         FieldPanel('title_above_the_collection', blocks.RichTextBlock(required=False)),

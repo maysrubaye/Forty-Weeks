@@ -280,13 +280,19 @@ h2 > .rich-text > p {
     font-family: 'Cantata One', serif;
 }
 
-img {
-  clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+.right-img {
+  clip-path: polygon(17% 0%, 100% 0%, 100% 100%, 0% 100%);
     margin-left: 4%;
     width: 100%;
     height: auto;
     vertical-align: middle;
     border-style: none;
+}
+
+.comments img {
+    width: 100%;
+    height: auto;
+    padding-bottom: 5%;
 }
 
 .sub_text {
