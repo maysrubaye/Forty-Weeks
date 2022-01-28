@@ -126,11 +126,10 @@ section {
 
 
 .text-home h1 > p {
-    font-size: 4rem;
+    font-size: 6rem;
     text-align: left;
     color: black;
     font-family: 'Tiempos Headline', serif;
-    font-size: 3.125rem;
     line-height: 1;
     font-weight: 600;
 }
