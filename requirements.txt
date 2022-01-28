@@ -18,7 +18,6 @@ draftjs-exporter==2.1.7
 gunicorn==20.0.4
 html5lib==1.0.1
 idna==2.8
-jmespath>=0.9.4
 Pillow>=9.0.0
 psycopg2==2.8.4
 python-dateutil==2.8.1
